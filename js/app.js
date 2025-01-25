@@ -4,7 +4,6 @@ document.getElementById('valor-total').innerHTML = '';
 
 
 function adicionar() {
-    // Recuperar valores - nome do produto, quantidade e valor
     let Produto = document.getElementById('produto').value;
     let nomeProduto = Produto.split('-')[0];
     let valorUnitario = Produto.split('R$')[1];
@@ -31,6 +30,7 @@ function adicionar() {
         Total: <span class="texto-azul" id="valor-total">R$${totalGeral}</span>
     </p>`;
     document.getElementById('quantidade').value = 0;
+   
 }
 
 function limpar() {
@@ -50,3 +50,16 @@ function limpar() {
     let limparQuantidade = document.getElementById('quantidade');
     limparQuantidade.value = ""; // Aqui o campo de quantidade é limpo 
 }
+
+
+
+// validação para adc ao carrinho produtos e quantidades validas 
+function validacao(){
+    if (document.querySelector('quantidade').value <= 0) {
+    let aviso = document.querySelector('.texto-medio-azul');
+    aviso.innerHTML = `<span class="texto-medio-azul">"Quantidade inválida, coloca um valor acima de zero !</span>`;
+    return;
+}
+
+}
+//mensagem de erro caso não seja adc
