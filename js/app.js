@@ -30,6 +30,7 @@ function adicionar() {
     totalizando.innerHTML = `<p class="carrinho__total">
         Total: <span class="texto-azul" id="valor-total">R$${totalGeral}</span>
     </p>`;
+    document.getElementById('quantidade').value = 0;
 }
 
 function limpar() {
