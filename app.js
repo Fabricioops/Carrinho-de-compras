@@ -31,7 +31,7 @@ function adicionar() {
     </p>`;
     document.getElementById('quantidade').value = 0;
    
-}
+} 
 
 function limpar() {
     // Limpar a lista de produtos
